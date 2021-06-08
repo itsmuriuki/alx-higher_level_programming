@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Documentation for singly linked list classes"""
+"""Documentation for singly linked list class"""
 
 
 class Node():
