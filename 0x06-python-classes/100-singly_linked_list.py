@@ -9,12 +9,12 @@ class Node():
         """instantiation of a singly-linked list node
 
         Args:
-        data (int): data contained in the node
-        next_node (Node, optional): the next node of the list
+          data (int): data contained in the node
+          next_node (Node, optional): the next node of the list
 
         Raises:
-        TypeError: if the data is not an integer of next_node is not
-        a Node instance
+          TypeError: if the data is not an integer of next_node is not
+          a Node instance
         """
 
         if type(data) != int:
@@ -31,7 +31,7 @@ class Node():
         """Returns the data value in the current node
 
         Returns:
-        data value contained in current node
+          data value contained in current node
         """
         return self.__data
 
@@ -40,10 +40,10 @@ class Node():
         """Sets the data value of the current node
 
         Args:
-        data (int): the new data value of the node
+          data (int): the new data value of the node
 
         Raises:
-        TypeError: when the data value is not an integer
+          TypeError: when the data value is not an integer
         """
 
         if type(value) != int:
@@ -55,7 +55,7 @@ class Node():
         """Retrives the next_node value for the current node
 
         Returns:
-        the next_node of the current node
+          the next_node of the current node
         """
         return self.__next_node
 
@@ -64,10 +64,10 @@ class Node():
         """Sets a new next_node of the current node
 
         Args:
-        value (Node): the new node
+          value (Node): the new node
 
         Raises:
-        TypeError: if the next_node is not a Node instance
+          TypeError: if the next_node is not a Node instance
         """
 
         if value is None or isinstance(value, Node):
@@ -88,10 +88,10 @@ class SinglyLinkedList():
         """Inserts a Node into the linked list in a sorted fashion
 
         Args:
-        value (int): the Node value
+          value (int): the Node value
 
         Raises:
-        TypeError:if the value supplied to the node is not an integer
+          TypeError:if the value supplied to the node is not an integer
         """
 
         if type(value) != int:
