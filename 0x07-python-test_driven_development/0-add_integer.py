@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Documentation for a simple  add integer"""
 
 
@@ -12,9 +13,9 @@ def add_integer(a, b=98):
         the sum of a and b
     """
 
-    if not isinstance (a, (int, float)):
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    if not isinstance (b, (int, float)):
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
     if isinstance(a, float):
         a = int(a)
