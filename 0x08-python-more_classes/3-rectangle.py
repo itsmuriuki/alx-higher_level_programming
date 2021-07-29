@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Documentation for Rectangle class"""
+"""Documentation for a rectangle class"""
 
 
 class Rectangle:
-    """Class for a rectangle shape"""
+    """Class for a Rectangle shape"""
 
     def __init__(self, width=0, height=0):
         """Instantiation of a rectangle
@@ -76,3 +76,28 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Returns the area of the instance"""
+
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """Returns the perimeter of the instance"""
+
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        return 2 * self.__height + 2 * self.__width
+
+    def __str__(self):
+        """Functionality for printing and using str() functions"""
+
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        rectangle = []
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rectangle.append('#')
+            if i is not self.__height - 1:
+                rectangle.append('\n')
+        return''.join(rectangle)
