@@ -22,20 +22,20 @@ Strings
 =======
 	The first and last name inputs must be strings
 
-	>>> say_my_name("Derek", "Kwok")
-	My name is Derek Kwok
+	>>> say_my_name("Gerald", "Muriuki")
+	My name is Gerald Muriuki
 
-	>>> say_my_name("John", "Smith")
+	>>> say_my_name("John", "Mwangi")
 	My name is John Smith
 
-	>>> say_my_name("Walter", "White")
+	>>> say_my_name("Walter", "mzii")
 	My name is Walter White
 
 	>>> say_my_name("Bob")
     	My name is Bob
 
-	>>> say_my_name("Derek")
-    	My name is Derek
+	>>> say_my_name("Gerald")
+    	My name is Gerald
 
 	>>> say_my_name("D", "K")
 	My name is D K
@@ -46,10 +46,10 @@ Strings
 	>>> say_my_name(" ", " ")
 	My name is
 
-	>>> say_my_name(" ", "Kwok")
-	My name is   Kwok
+	>>> say_my_name(" ", Muriuki"")
+	My name is   Muriuki
 
-	>>> say_my_name("Derek", " ")
+	>>> say_my_name("Gerald", " ")
    	My name is Gerald
 
 	>>> say_my_name("", "")

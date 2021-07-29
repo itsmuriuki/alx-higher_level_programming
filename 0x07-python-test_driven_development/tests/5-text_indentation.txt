@@ -1,0 +1,259 @@
+================================
+How to use 5-text_indentation.py
+================================
+
+This function takes a string and prints two new lines after each period,
+question mark, or colon
+
+	 >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Documentation
+=============
+
+	 >>> module_doc = __import__("5-text_indentation").__doc__
+	 >>> print(len(module_doc) > 0)
+	 True
+
+	 >>> func_doc = __import__("5-text_indentation").text_indentation.__doc__
+	 >>> print(len(func_doc) > 0)
+	 True
+
+Strings
+=======
+Given a string input, the program should work as expected
+
+Short Strings:
+
+      	 >>> string = "Hello, my name is Derek. What is your name? This is my school: DHK School"
+
+      	 >>> text_indentation(string)
+	 Hello, my name is Gerald.
+	 <BLANKLINE>
+	 What is your name?
+	 <BLANKLINE>
+	 This is my school:
+	 <BLANKLINE>
+	 Holberton School
+
+Long Strings:
+
+	   >>> string = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres")
+
+	   >>> text_indentation(string)
+	   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	   <BLANKLINE>
+	   Quonam modo?
+	   <BLANKLINE>
+	   Utrum igitur tibi litteram videor an totas paginas commovere?
+	   <BLANKLINE>
+	   Non autem hoc:
+	   <BLANKLINE>
+	   igitur ne illud quidem.
+	   <BLANKLINE>
+	   Fortasse id optimum, sed ubi illud:
+	   <BLANKLINE>
+	   Plus semper voluptatis?
+	   <BLANKLINE>
+	   Teneo, inquit, finem illi videri nihil dolere.
+	   <BLANKLINE>
+	   Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+	   <BLANKLINE>
+	   Si id dicis, vicimus.
+	   <BLANKLINE>
+	   Inde sermone vario sex illa a Dipylo stadia confecimus.
+	   <BLANKLINE>
+	   Sin aliud quid voles, postea.
+	   <BLANKLINE>
+	   Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+	   <BLANKLINE>
+	   Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+	   >>> string = "Hello World"
+
+	   >>> text_indentation(string)
+	   Hello World
+
+	   >>> string = "     Hello World      "
+
+	   >>> text_indentation(string)
+	   Hello World
+
+Multiple Spaces
+===============
+If there are multiple spaces after the three punctuation marks, they should not
+be printed
+
+   	 >>> string = "Hello, my name is Gerald.  What is your name?     This is my school:          Holberton School"
+
+	 >>> text_indentation(string)
+	 Hello, my name is Gerald.
+	 <BLANKLINE>
+	 What is your name?
+	 <BLANKLINE>
+	 This is my school:
+	 <BLANKLINE>
+	 Holberton School
+
+   	 >>> string = "Hello, my name is Gerald.  What is your name?     This is my school:          Holberton School   "
+
+	 >>> text_indentation(string)
+	 Hello, my name is Gerald.
+	 <BLANKLINE>
+	 What is your name?
+	 <BLANKLINE>
+	 This is my school:
+	 <BLANKLINE>
+	 Holberton School
+
+	 >>> string = "Hello          ."
+
+	 >>> text_indentation(string)
+	 Hello          .
+	 <BLANKLINE>
+
+	 >>> string = "Hello     . My     name     is     Gerald:     Yo"
+
+	 >>> text_indentation(string)
+	 Hello     .
+	 <BLANKLINE>
+	 My     name     is     Gerald:
+         <BLANKLINE>
+  	 Yo
+
+	 >>> string = "Hello     . Derek     ? Name     :"
+
+	 >>> text_indentation(string)
+	 Hello     .
+	 <BLANKLINE>
+	 Gerald     ?
+	 <BLANKLINE>
+	 Name     :
+	 <BLANKLINE>
+
+	 >>> string = "Hello     .     ."
+
+	 >>> text_indentation(string)
+     	 Hello     .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
+	 >>> string = ".     .     .     ."
+
+	 >>> text_indentation(string)
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
+	 >>> string = ".     .     .     .     "
+
+	 >>> text_indentation(string)
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
+	 >>> string = "...."
+
+	 >>> text_indentation(string)
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
+Characters:
+
+	>>> string = 'D'
+
+	>>> text_indentation(string)
+	D
+
+	>>> string = "D. H? K"
+
+	>>> text_indentation(string)
+	D.
+	<BLANKLINE>
+	H?
+	<BLANKLINE>
+	K
+
+Multiple Space Characters:
+
+	>>> string = "D.    H?  K"
+
+	>>> text_indentation(string)
+	D.
+	<BLANKLINE>
+	H?
+	<BLANKLINE>
+	K
+
+Punctuation at the end:
+
+	 >>> string = "Hello, my name is Gerald. What is your name? This is my school: Holberton School."
+
+	 >>> text_indentation(string)
+	 Hello, my name is Derek.
+	 <BLANKLINE>
+	 What is your name?
+	 <BLANKLINE>
+	 This is my school:
+	 <BLANKLINE>
+	 DHK School.
+	 <BLANKLINE>
+
+No spaces after punctuation:
+
+   	 >>> string = "Hello, my name is Gerald.What is your name?This is my school:Holberton School"
+
+	 >>> text_indentation(string)
+	 Hello, my name is Gerald.
+	 <BLANKLINE>
+	 What is your name?
+	 <BLANKLINE>
+	 This is my school:
+	 <BLANKLINE>
+	 Holberton School
+
+Leading and Trailing Whitespace:
+
+	>>> string = "    Hello, my name is Gerald. What is your name? This is my school: Gerald School"
+
+	 >>> text_indentation(string)
+	 Hello, my name is Gerald.
+
+Errors
+======
+
+	>>> text_indentation(12)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(12.5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation([1, 2, 3])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation((1, 2, 3))
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation({"hello":1, "world":2})
+	Traceback (most recent call last):
+	TypeError: text must be a string
