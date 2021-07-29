@@ -123,4 +123,36 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Compares two rectangle areas
-???MANY LINES MISSING
+        Args:
+            rect_1 (Rectangle): the first rectangular object
+            rect_2 (Rectangle): the second rectangular object
+        Raises:
+            TypeError: if either rectangle are not instances of the
+            Rectangle class
+        Returns:
+            rect_1 if rect_1's area is equal or greater than rect_2's
+            rect_2 if rect_2's area is greater than rect_1's
+        """
+
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        area1 = rect_1.__width * rect_1.__height
+        area2 = rect_2.__width * rect_2.__height
+
+        if area1 == area2:
+            return rect_1
+        elif area1 > area2:
+            return rect_1
+        else:
+            return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Returns a Rectangle instance with same width and height
+        Args:
+            size (int, optional): the size of the square instance
+        """
+
+        return cls(size, size)
