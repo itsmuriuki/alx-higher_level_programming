@@ -38,8 +38,9 @@ class Rectangle(BaseGeometry):
 
         Args:
             width (int): the width of the rectangle
-            heght (int): the height of the rectangle
+            height (int): the height of the rectangle
         """
+
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width

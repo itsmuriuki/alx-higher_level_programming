@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Documentation of a class MyList that inherits from list"""
+""" Documentation for simple MyList class that inherits from the list class"""
 
 
 class MyList(list):
@@ -10,4 +10,3 @@ class MyList(list):
         """Function sorts the current instance of MyList"""
 
         print(sorted(self))
-    

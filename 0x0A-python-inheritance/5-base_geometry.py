@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Documentation for empty class"""
+"""Documentation for BaseGeometry class"""
 
 
-class BaseGeometry():
+class BaseGeometry:
 
-    """Empty BaseGeometry class"""
+    """Base Geometry class that is empty"""
 
     pass

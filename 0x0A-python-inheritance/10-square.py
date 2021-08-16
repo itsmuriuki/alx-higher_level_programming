@@ -38,7 +38,7 @@ class Rectangle(BaseGeometry):
 
         Args:
             width (int): the width of the rectangle
-            heght (int): the height of the rectangle
+            height (int): the height of the rectangle
         """
 
         self.integer_validator("width", width)
@@ -67,8 +67,8 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
 
-        """Square class that inherits from Rectangle subclass which inherits
-        From BaseGeometry class"""
+    """Square class that inherits from Rectangle subclass which inherits
+       from BaseGeometry class"""
 
     def __init__(self, size):
         """Instantiation function for size attribute

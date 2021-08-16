@@ -1,11 +1,11 @@
-=========================
+=======================
 How to use 1-my_list.py
-=========================
+=======================
 
 This function takes a list and prints the list sorted.
 Function assumptions: all entries are integers
 
-      >>> MyList = __import__('1-my_list').MyList
+     >>> MyList = __import__('1-my_list').MyList
 
 Documentation
 =============

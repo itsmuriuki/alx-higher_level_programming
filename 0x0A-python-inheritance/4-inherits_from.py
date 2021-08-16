@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""Documentation of an inheritance checker"""
+"""Documentation for inheritance checker"""
 
 
 def inherits_from(obj, a_class):
     """Checks if object is an instance of a class that inherited from
-        a specified class
+       a specified class
+
     Returns:
         True if object is an instance, False otherwise
     """
