@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Documentation for BaseGeometry class"""
 
+
 class BaseGeometry:
 
     """Base Geometry class that is empty"""
@@ -28,14 +29,13 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
-
 class Rectangle(BaseGeometry):
 
     """Rectangle class that inherits from BaseGeometry class"""
 
     def __init__(self, width, height):
-        """Instantiation function
-        
+        """Instantiation functio
+
         Args:
             width (int): the width of the rectangle
             heght (int): the height of the rectangle
@@ -48,16 +48,16 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """Area function
-        
+
         Returns:
             The area of the rectangle
         """
 
         return self.__width * self.__height
-    
+
     def __str__(self):
         """The function for use in print() and str()
-        
+
         Returns:
             Specially formated string
         """
@@ -66,24 +66,24 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-    
+
     """Square class that inherits from Rectangle subclass which inherits
         From BaseGeometry class"""
 
     def __init__(self, size):
         """Instantiation function for size attribute
-        
+
         Args:
             size (int): the size of the square
         """
 
         self.integer_validator("size", size)
-        super().__init__(size,size)
+        super().__init__(size, size)
         self.__size = size
 
     def area(self):
         """Area function for the square object
-        
+
         Returns:
             Area of the square
         """
@@ -92,14 +92,9 @@ class Square(Rectangle):
 
     def __str__(self):
         """The function for use in ptint() and str()
-        
+
         Returns:
             specially formated string
         """
 
         return "[Square] {}/{}".format(self.__size, self.__size)
-
-s = Square(13)
-
-print(s)
-print(s.area())

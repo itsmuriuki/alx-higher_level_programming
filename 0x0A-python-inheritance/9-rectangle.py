@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Documentation for BaseGeometry class"""
 
+
 class BaseGeometry:
 
     """Base Geometry class that is empty"""
@@ -28,14 +29,13 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
-
 class Rectangle(BaseGeometry):
 
     """Rectangle class that inherits from BaseGeometry class"""
 
     def __init__(self, width, height):
         """Instantiation function
-        
+
         Args:
             width (int): the width of the rectangle
             heght (int): the height of the rectangle
@@ -48,19 +48,18 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """Area function
-        
+
         Returns:
             The area of the rectangle
         """
 
         return self.__width * self.__height
-    
+
     def __str__(self):
         """The function for use in print() and str()
-        
+
         Returns:
             Specially formated string
         """
 
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
-        
