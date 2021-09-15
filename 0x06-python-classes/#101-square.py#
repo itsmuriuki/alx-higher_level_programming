@@ -1,0 +1,59 @@
+#!/usr/bin/python3
+"""Documentation of a square class"""
+
+
+class Square():
+    """Square class for a quadrilateral with four equal sides"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        """Sets the initial size and position of an instantiated object
+           Throws an error when the size is not integer or when position is not
+           a tuple containing two integers
+
+        Args:
+            size (int, optional): the size of the square object
+            position (tuple, optional): the position of the object when printed
+
+        Raises:
+            TypeError: when the value passed is not an integer or a two integer
+            tuplet
+            ValueError: when the value passed is less than 0
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
+
+        if not isinstance(position, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(position) is not 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif not isinstance(position[0], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif not isinstance(position[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = position
+
+    @property
+    def size(self):
+        """Returns the current size of the square object
+
+        Returns:
+           size of the current square object
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Resets the size of the square object
+
+        Returns:
+            size of the current square object
+        """
+        return self.__size
+        
